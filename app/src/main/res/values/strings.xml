@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AuthTest</string>
+    <string name="keycloak_testing">Keycloak testing</string>
+    <string name="login">Login</string>
+</resources>

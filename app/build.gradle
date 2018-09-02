@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.dhoomilbsheta.authtest"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                'appAuthRedirectScheme': 'com.dhoomilbsheta.authtest'
+        ]
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation 'androidx.appcompat:appcompat:1.0.0-rc02'
+
+    // ONLY FOR CUSTOM TABS
+    implementation "com.android.support:appcompat-v7:28.0.0-rc02"
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'com.squareup.okio:okio:1.14.1'
+    implementation 'joda-time:joda-time:2.10'
+    implementation 'net.openid:appauth:0.7.1'
+    annotationProcessor "com.github.bumptech.glide:compiler:4.8.0"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+}

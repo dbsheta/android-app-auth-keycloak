@@ -1,0 +1,7 @@
+{
+  "client_id": "android",
+  "redirect_uri": "com.dhoomilbsheta.authtest:/oauth2redirect",
+  "authorization_scope": "openid email profile",
+  "discovery_uri": "http://192.168.0.9:8080/auth/realms/poc/.well-known/openid-configuration",
+  "https_required": false
+}
